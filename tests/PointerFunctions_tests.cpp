@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include <array>
+#include <cstdint>
 
-
-
+std::array<uint8_t, 4> floatToBytes(float);
 TEST(FloatToBytesTest, ConvertsCorrectly) {
     float input = 3.14f;
     std::array<uint8_t, 4> bytes = floatToBytes(input);
