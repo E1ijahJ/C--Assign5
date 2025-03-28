@@ -12,7 +12,10 @@ std::array<uint8_t, 4> floatToBytes(float value) {
     }
     return bytes;
 }
-
+/// @brief  Calls a function pointer for a 32 bit integer 
+/// @param func a funcion pointer that takes an int and returns a int
+/// @param value the integer value to pass into the funciton
+/// @return the result of calling the function
 int callFunctionPointer(int (*func)(int), int value) {
     return func(value);
 }
