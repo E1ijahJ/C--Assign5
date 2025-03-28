@@ -1,7 +1,9 @@
 #include <array>
 #include <cstdint>
 
-
+/// @brief THis fuunction takes a 32 bit float and then returns the array of its 4 bytes
+/// @param value the 32 bit number
+/// @return array of the 4 bytes 
 std::array<uint8_t, 4> floatToBytes(float value) {
     std::array<uint8_t, 4> bytes;
     uint8_t* raw = reinterpret_cast<uint8_t*>(&value);
