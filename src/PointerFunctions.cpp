@@ -19,7 +19,9 @@ std::array<uint8_t, 4> floatToBytes(float value) {
 int callFunctionPointer(int (*func)(int), int value) {
     return func(value);
 }
-
+/// @brief Extracts specifc bytes from a 64 bit float
+/// @param value the double to extract bytes from
+/// @return an array of 4 bytes at the indexes of 0,2,4,6 of the double 
 std::array<uint8_t, 4> getSelectedBytesFromDouble(double value) {
     std::array<uint8_t, 4> selectedBytes;
     uint8_t* raw = reinterpret_cast<uint8_t*>(&value);
