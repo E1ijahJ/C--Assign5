@@ -16,3 +16,15 @@ TEST(FloatToBytesTest, ConvertsCorrectly) {
         EXPECT_EQ(bytes[i], raw[i]);
     }
 }
+
+// Forward declare
+int callFunctionPointer(int (*func)(int), int value);
+
+// Example functions to pass in
+int square(int x) { return x * x; }
+int negate(int x) { return -x; }
+
+TEST(FunctionPointerTest, CallsCorrectFunction) {
+    EXPECT_EQ(callFunctionPointer(square, 4), 16);
+    EXPECT_EQ(callFunctionPointer(negate, 4), -4);
+}
