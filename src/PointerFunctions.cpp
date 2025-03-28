@@ -10,3 +10,7 @@ std::array<uint8_t, 4> floatToBytes(float value) {
     }
     return bytes;
 }
+
+int callFunctionPointer(int (*func)(int), int value) {
+    return func(value);
+}
