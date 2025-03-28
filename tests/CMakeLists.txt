@@ -1,0 +1,5 @@
+add_executable(pointer_tests PointerFunctions_tests.cpp)
+
+target_link_libraries(pointer_tests PRIVATE pointer_lib GTest::gtest_main)
+
+gtest_discover_tests(pointer_tests)
